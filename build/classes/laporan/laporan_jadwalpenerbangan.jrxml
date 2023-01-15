@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7e8b9ed9-a53c-40ad-8927-93f7b11d8d04">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from jadwalpenerbangan]]>
+	</queryString>
+	<field name="id_penerbangan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_maskapai" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tujuan_penerbangan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_penerbangan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jam_penerbangan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_penerbangan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status_ketersediaan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="46" uuid="949cef56-24cf-4684-b149-ffb676db7a32"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="40" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Jadwal Penerbangan ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="35" uuid="94d1a251-2b48-496f-9112-11a81fda235a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="20"/>
+				</textElement>
+				<text><![CDATA[PT. NadiaAir Indonesia Tbk]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="38" height="20" backcolor="#009999" uuid="10b68c97-0721-488b-a479-439335a48dde"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="38" y="0" width="139" height="20" backcolor="#009999" uuid="008a23a5-c771-47ce-81f5-14517568da8e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nama Maskapai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="177" y="0" width="100" height="20" backcolor="#009999" uuid="0d1b4bb9-95ff-4b4b-9a14-eb62af70c5fa"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Tujuan Penerbangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="277" y="0" width="123" height="20" backcolor="#009999" uuid="60b3bc86-0073-483e-b226-7100725ea8e8"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Tanggal Penerbangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="400" y="0" width="100" height="20" backcolor="#009999" uuid="638dab22-c0f1-44a4-a76a-cfa831929814"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Jam Penerbangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="500" y="0" width="100" height="20" backcolor="#009999" uuid="295bee12-6ca4-4543-98e0-75010bd6cfee"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Jenis Penerbangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="600" y="0" width="100" height="20" backcolor="#009999" uuid="55383001-6bec-46f5-890d-03e4eccb2dfd"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="700" y="0" width="100" height="20" backcolor="#009999" uuid="123f553d-bb74-4c09-9408-9bf88642eb96"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Status Ketersediaan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="38" height="20" uuid="66874786-24e4-41fb-8869-6b39769827c4"/>
+				<textFieldExpression><![CDATA[$F{id_penerbangan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="38" y="0" width="139" height="20" uuid="adf7273d-22f9-426a-9525-8f92f6b5d0e2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nama_maskapai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="0" width="100" height="20" uuid="ab53dd94-d40a-490c-9f1f-6c47176c894c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tujuan_penerbangan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="277" y="0" width="123" height="20" uuid="ceae2e5a-5a17-4907-b07c-92dc879e2e94"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tanggal_penerbangan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20" uuid="44493bd8-ea29-4536-b59b-babd563b122e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{jam_penerbangan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="0" width="100" height="20" uuid="e8919afc-ae76-4f83-a6a8-e3297ab48a03"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{jenis_penerbangan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="0" width="100" height="20" uuid="d00f8099-b11f-49a8-800b-d1b934fb641d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="700" y="0" width="100" height="20" uuid="49946ea2-b232-48ba-b96c-37bcb22e408e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{status_ketersediaan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="43" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<line>
+				<reportElement x="6" y="3" width="796" height="1" uuid="14d6ad21-6c02-43ef-877a-5fa1040d1566"/>
+			</line>
+			<staticText>
+				<reportElement x="603" y="4" width="199" height="20" uuid="bf2d8260-370f-44e2-a130-88f64783ccbe"/>
+				<text><![CDATA[PT. NadiaAir Indonesia Tbk, Januari 2023]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
